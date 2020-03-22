@@ -41,7 +41,7 @@ public class Q409 {
         if (s.length() == 0) {
             return 0;
         }
-        Map m = new HashMap();
+        Map<Character, Integer> m = new HashMap<Character, Integer>();
         int len = 0;
         for (int i = 0; i < s.length(); i++) {
             if (m.containsKey(s.charAt(i))) {
@@ -56,11 +56,11 @@ public class Q409 {
 
     public int longestPalindrome2(String s) {
         int[] count = new int[128];
-        for (char c: s.toCharArray())
+        for (char c : s.toCharArray())
             count[c]++;
 
         int ans = 0;
-        for (int v: count) {
+        for (int v : count) {
             ans += v / 2 * 2;
             if (v % 2 == 1 && ans % 2 == 0)
                 ans++;
