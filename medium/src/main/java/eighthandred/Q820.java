@@ -1,4 +1,4 @@
-package EightHandred;
+package eighthandred;
 
 import org.junit.Test;
 
