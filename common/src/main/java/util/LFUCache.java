@@ -15,7 +15,7 @@ public class LFUCache {
     int capacity;
 
     public LFUCache(int capacity) {
-        cache = new HashMap<Integer, Node>(capacity);
+        cache = new HashMap<>(capacity);
         firstLinkedList = new DoublyLinkedList();
         lastLinkedList = new DoublyLinkedList();
         firstLinkedList.post = lastLinkedList;
